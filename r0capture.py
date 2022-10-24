@@ -216,7 +216,7 @@ def ssl_log(process, pcap=None, host=False, verbose=False, isUsb=False, ssllib="
         """
         if message["type"] == "error":
             logger.info(f"{message}")
-            os.kill(os.getpid(), signal.SIGTERM)
+            # os.kill(os.getpid(), signal.SIGTERM)
             return
         if len(data) == 1:
             logger.info(f'{message["payload"]["function"]}')
